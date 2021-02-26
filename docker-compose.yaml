@@ -12,6 +12,6 @@ services:
     image: "loadimpact/k6:0.30.0"
     volumes: 
       - ./script.js:/script.js
-    command: run /script.js --vus 2000 --duration 100s
+    command: run /script.js --compatibility-mode=base --vus 2000 --duration 100s
     depends_on: 
       - pong
